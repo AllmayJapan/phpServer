@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー登録とログイン</title>
+    <style>
+body {
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    border-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    border-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+   <div class="container">
+       <form action="register.php" method="post">
+           <h2>ユーザー登録</h2>
+           <label for="register-name">ユーザー名</label>
+           <input id="register-name" type="text" name="username" required>
+
+           <label for="register-password">パスワード</label>
+           <input id="register-password" type="text" name="password">
+
+           <button type="submit">登録する</button>
+       </form>
+
+       <!-- ログインフォーム -->
+       <form action="login.php" method="post">
+           <h2>ログイン</h2>
+           <label for="login-name">ユーザー名</label>
+           <input id="login-name" type="text" name="username" required>
+
+           <label for="login-password">パスワード</label>
+           <input id="login-password" type="text" name="password">
+
+           <button type="submit">ログイン</button>
+       </form>
+   </div>
+</body>
+</html>

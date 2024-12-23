@@ -1,0 +1,167 @@
+#0 building with "default" instance using docker driver
+
+#1 [web internal] load build definition from Dockerfile
+#1 transferring dockerfile: 235B done
+#1 DONE 0.0s
+
+#2 [web internal] load metadata for docker.io/library/php:8.2-apache
+#2 DONE 0.8s
+
+#3 [web internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [web 1/2] FROM docker.io/library/php:8.2-apache@sha256:54bbb55ad2cee11b32125de5e13d3397b8498587b555a7fd5c7e25f11f047e67
+#4 CACHED
+
+#5 [web 2/2] RUN apt-get update && apt-get install -y     libpq-dev     libonig-dev     && docker-php-ext-install pdo pdo_mysql     && apt-get clean && rm -rf /var/lib/apt/lists/*
+#5 0.397 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#5 0.432 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#5 0.446 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#5 0.495 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8789 kB]
+#5 0.836 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [8856 B]
+#5 0.836 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [236 kB]
+#5 1.535 Fetched 9288 kB in 1s (7873 kB/s)
+#5 1.535 Reading package lists...
+#5 1.923 Reading package lists...
+#5 2.331 Building dependency tree...
+#5 2.449 Reading state information...
+#5 2.592 The following additional packages will be installed:
+#5 2.592   libpq5 libssl-dev
+#5 2.594 Suggested packages:
+#5 2.594   postgresql-doc-15 libssl-doc
+#5 2.618 The following NEW packages will be installed:
+#5 2.619   libonig-dev libpq-dev libpq5 libssl-dev
+#5 2.672 0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+#5 2.672 Need to get 2872 kB of archives.
+#5 2.672 After this operation, 14.3 MB of additional disk space will be used.
+#5 2.672 Get:1 http://deb.debian.org/debian bookworm/main amd64 libonig-dev amd64 6.9.8-1 [96.7 kB]
+#5 2.705 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 libpq5 amd64 15.10-0+deb12u1 [191 kB]
+#5 2.722 Get:3 http://deb.debian.org/debian bookworm/main amd64 libssl-dev amd64 3.0.15-1~deb12u1 [2439 kB]
+#5 2.820 Get:4 http://deb.debian.org/debian-security bookworm-security/main amd64 libpq-dev amd64 15.10-0+deb12u1 [145 kB]
+#5 2.984 debconf: delaying package configuration, since apt-utils is not installed
+#5 3.012 Fetched 2872 kB in 0s (14.7 MB/s)
+#5 3.034 Selecting previously unselected package libonig-dev.
+#5 3.034 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6350 files and directories currently installed.)
+#5 3.060 Preparing to unpack .../libonig-dev_6.9.8-1_amd64.deb ...
+#5 3.063 Unpacking libonig-dev (6.9.8-1) ...
+#5 3.100 Selecting previously unselected package libpq5:amd64.
+#5 3.101 Preparing to unpack .../libpq5_15.10-0+deb12u1_amd64.deb ...
+#5 3.107 Unpacking libpq5:amd64 (15.10-0+deb12u1) ...
+#5 3.144 Selecting previously unselected package libssl-dev:amd64.
+#5 3.145 Preparing to unpack .../libssl-dev_3.0.15-1~deb12u1_amd64.deb ...
+#5 3.149 Unpacking libssl-dev:amd64 (3.0.15-1~deb12u1) ...
+#5 3.331 Selecting previously unselected package libpq-dev.
+#5 3.332 Preparing to unpack .../libpq-dev_15.10-0+deb12u1_amd64.deb ...
+#5 3.335 Unpacking libpq-dev (15.10-0+deb12u1) ...
+#5 3.375 Setting up libonig-dev (6.9.8-1) ...
+#5 3.387 Setting up libpq5:amd64 (15.10-0+deb12u1) ...
+#5 3.397 Setting up libssl-dev:amd64 (3.0.15-1~deb12u1) ...
+#5 3.409 Setting up libpq-dev (15.10-0+deb12u1) ...
+#5 3.420 Processing triggers for libc-bin (2.36-9+deb12u9) ...
+#5 3.449 ldconfig: File /lib/x86_64-linux-gnu/libcrypto.so is empty, not checked.
+#5 3.449 ldconfig: File /lib/x86_64-linux-gnu/libssl.so is empty, not checked.
+#5 3.464 ldconfig: File /lib/x86_64-linux-gnu/libopcodes-2.40-system.so is empty, not checked.
+#5 3.464 ldconfig: File /lib/x86_64-linux-gnu/librtmp.so.1 is empty, not checked.
+#5 3.464 ldconfig: File /lib/x86_64-linux-gnu/libquadmath.so.0 is empty, not checked.
+#5 3.464 ldconfig: File /lib/x86_64-linux-gnu/libmagic.so.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libpsl.so.5 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libubsan.so.1.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libkeyutils.so.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libgprofng.so.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libctf.so.0.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libnghttp2.so.14 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libnghttp2.so.14.24.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libcurl.so.4.8.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libmpfr.so.6 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libpkgconf.so.3 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libisl.so.23.2.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/liblber-2.5.so.0.1.8 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libcurl.so.4 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libasan.so.8.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libbfd-2.40-system.so is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libpkgconf.so.3.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libctf-nobfd.so.0.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libbrotlienc.so.1.0.9 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libjansson.so.4.14.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libtirpc.so is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libctf.so.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libssl.so.3 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libjansson.so.4 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/liblsan.so.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libquadmath.so.0.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libperl.so.5.36.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libnsl.so.2 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libasan.so.8 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libgomp.so.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libldap-2.5.so.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libldap-2.5.so.0.1.8 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libsframe.so.0.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libmpc.so.3 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/liblsan.so.0.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libsasl2.so.2 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libnsl.so.2.0.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libmpc.so.3.3.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libcc1.so.0.0.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/liblber-2.5.so.0 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libgssapi_krb5.so.2 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libkrb5.so.3 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libitm.so.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libkrb5.so.3.3 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libkrb5support.so.0.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libisl.so.23 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libbrotlidec.so.1 is empty, not checked.
+#5 3.465 ldconfig: File /lib/x86_64-linux-gnu/libgdbm_compat.so.4.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libgprofng.so.0.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libm.so is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libk5crypto.so.3 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libgdbm_compat.so.4 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libitm.so.1.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libatomic.so.1.2.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libcc1.so.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libtirpc.so.3 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libsframe.so.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libgdbm.so.6 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libkeyutils.so.1.10 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libc.so is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libtsan.so.2 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libctf-nobfd.so.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libssh2.so.1.0.1 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libpsl.so.5.3.4 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libgomp.so.1.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libubsan.so.1 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libbrotlicommon.so.1 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libatomic.so.1 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libnsl.so is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libmagic.so.1.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libssh2.so.1 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libperl.so.5.36 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libtsan.so.2.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libtirpc.so.3.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libkrb5support.so.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libgdbm.so.6.0.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libsasl2.so.2.0.25 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libcrypto.so.3 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libk5crypto.so.3.1 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libmpfr.so.6.2.0 is empty, not checked.
+#5 3.466 ldconfig: File /lib/x86_64-linux-gnu/libbrotlienc.so.1 is empty, not checked.
+#5 4.565 Dpkg.pm did not return a true value at /usr/bin/dpkg-architecture line 25.
+#5 4.565 BEGIN failed--compilation aborted at /usr/bin/dpkg-architecture line 25.
+#5 ERROR: process "/bin/sh -c apt-get update && apt-get install -y     libpq-dev     libonig-dev     && docker-php-ext-install pdo pdo_mysql     && apt-get clean && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 255
+------
+ > [web 2/2] RUN apt-get update && apt-get install -y     libpq-dev     libonig-dev     && docker-php-ext-install pdo pdo_mysql     && apt-get clean && rm -rf /var/lib/apt/lists/*:
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libkrb5support.so.0 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libgdbm.so.6.0.0 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libsasl2.so.2.0.25 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libcrypto.so.3 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libk5crypto.so.3.1 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libmpfr.so.6.2.0 is empty, not checked.
+3.466 ldconfig: File /lib/x86_64-linux-gnu/libbrotlienc.so.1 is empty, not checked.
+4.565 Dpkg.pm did not return a true value at /usr/bin/dpkg-architecture line 25.
+4.565 BEGIN failed--compilation aborted at /usr/bin/dpkg-architecture line 25.
+------
+failed to solve: process "/bin/sh -c apt-get update && apt-get install -y     libpq-dev     libonig-dev     && docker-php-ext-install pdo pdo_mysql     && apt-get clean && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 255
